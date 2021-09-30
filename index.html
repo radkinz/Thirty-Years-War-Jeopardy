@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./script.js" async defer></script>
+</body>
+<h1>Jeopardy</h1>
+<!-- jeopardy board -->
+<div id="board">
+    <div class="head">Causes</div>
+    <div class="head">Historical Details</div>
+    <div class="head">Consequences</div>
+</div>
+
+<!-- jeopardy popup question -->
+<div id="overlay">
+    <div id="questioncontainer">
+        <div id="question">
+            <a class="close" onclick="closeAnswer()">&times;</a>
+            <div id="questiontext">
+
+            </div>
+            <div id="questionanswer" onclick="showAnswer()">
+                <div id="questionanswertext">Click to Reveal Answer</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
