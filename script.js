@@ -3,13 +3,12 @@ window.addEventListener("load", function () {
     var data = [
         ["200", "200", "200"],
         ["400", "400", "400"],
-        ["600", "600", "600"],
-        ["800", "800", "800"],
+        ["600", "600", "600"]
     ];
 
     // Add cells to board
     let container = document.getElementById("board");
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
             let cell = document.createElement("div");
             cell.innerHTML = data[i][j];
@@ -22,16 +21,14 @@ window.addEventListener("load", function () {
 });
 
 //questions
-var questionkey200 = ["a", "b", "c"];
-var questionkey400 = ["d", "e", "f"];
-var questionkey600 = ["g", "h", "i"];
-var questionkey800 = ["j", "k", "l"];
+var questionkey200 = ["What did the people of Prague do with Ferdinand's representives?", "b", "What year was the Peace of Westphalia created?"];
+var questionkey400 = ["What religion did Ferdinand want the people to become?", "e", "Who rose to power after the Thirty Years' War?"];
+var questionkey600 = ["What group initially declared war on Ferdinand?", "h", "How do we see a political shift in the War?"];
 
 //answers
-var answerkey200 = ["1", "2", "3"];
-var answerkey400 = ["4", "5", "6"];
-var answerkey600 = ["7", "8", "9"];
-var answerkey800 = ["10", "11", "12"];
+var answerkey200 = ["Throw em out the window, babe;)", "2", "1648"];
+var answerkey400 = ["Catholic", "5", "France"];
+var answerkey600 = ["Czechs", "8", "Catholic France fights with Protestant Sweden"];
 
 function showQuestion() {
     //display question container
@@ -48,9 +45,7 @@ function showQuestion() {
         questioncell.innerHTML = questionkey400[parseInt(this.id)];
     } else if (this.innerHTML == "600") {
         questioncell.innerHTML = questionkey600[parseInt(this.id)];
-    } else if (this.innerHTML == "800") {
-        questioncell.innerHTML = questionkey800[parseInt(this.id)];
-    } else {
+    }  else {
         return;
     }
 
@@ -60,18 +55,16 @@ function showQuestion() {
 
 function showAnswer() {
     let questioncell = document.getElementById("questiontext");
-   
+  
     //add answer toggle box
     let answercell = document.getElementById("questionanswertext");
     //connect cell to answer location
-    if (questioncell.innerHTML == "a" || questioncell.innerHTML == "b" || questioncell.innerHTML == "c") {
+    if (questioncell.innerHTML == "What did the people of Prague do with Ferdinand's representives?" || questioncell.innerHTML == "b" || questioncell.innerHTML == "What year was the Peace of Westphalia created?") {
         answercell.innerHTML = answerkey200[questionkey200.indexOf(questioncell.innerHTML)];
-    } else if (questioncell.innerHTML == "d" || questioncell.innerHTML == "e" || questioncell.innerHTML == "f") {
+    } else if (questioncell.innerHTML == "What religion did Ferdinand want the people to become?" || questioncell.innerHTML == "e" || questioncell.innerHTML == "Who rose to power after the Thirty Years' War?") {
         answercell.innerHTML = answerkey400[questionkey400.indexOf(questioncell.innerHTML)];
-    } else if (questioncell.innerHTML == "g" || questioncell.innerHTML == "h" || questioncell.innerHTML == "i") {
+    } else if (questioncell.innerHTML == "What group initially declared war on Ferdinand?" || questioncell.innerHTML == "h" || questioncell.innerHTML == "How do we see a political shift in the War?") {
         answercell.innerHTML = answerkey600[questionkey600.indexOf(questioncell.innerHTML)];
-    } else if (questioncell.innerHTML == "j" || questioncell.innerHTML == "k" || questioncell.innerHTML == "l") {
-        answercell.innerHTML = answerkey800[questionkey800.indexOf(questioncell.innerHTML)];
     } else {
         return;
     }
