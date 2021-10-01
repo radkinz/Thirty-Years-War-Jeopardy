@@ -21,14 +21,14 @@ window.addEventListener("load", function () {
 });
 
 //questions
-var questionkey200 = ["What did the people of Prague do with Ferdinand's representives?", "b", "What year was the Peace of Westphalia created?"];
-var questionkey400 = ["What religion did Ferdinand want the people to become?", "e", "Who rose to power after the Thirty Years' War?"];
-var questionkey600 = ["What group initially declared war on Ferdinand?", "h", "How do we see a political shift in the War?"];
+var questionkey200 = ["What did the people of Prague do with Ferdinand's representives?", "Which was the first phase in the Thirty Years' War and who was the winner?", "What year was the Peace of Westphalia created?"];
+var questionkey400 = ["What religion did Ferdinand want the people to become?", "Which country was the weakest during the whole war?", "Who rose to power after the Thirty Years' War?"];
+var questionkey600 = ["What group initially declared war on Ferdinand?", "Where did Frederick V go after his failure?", "How do we see a political shift in the War?"];
 
 //answers
-var answerkey200 = ["Throw em out the window, babe;)", "2", "1648"];
-var answerkey400 = ["Catholic", "5", "France"];
-var answerkey600 = ["Czechs", "8", "Catholic France fights with Protestant Sweden"];
+var answerkey200 = ["Throw em out the window, babe;)", "Bohemia Revolt, Holy Roman Empire", "1648"];
+var answerkey400 = ["Catholic", "Denmark", "France"];
+var answerkey600 = ["Czechs", "Dutch", "Catholic France fights with Protestant Sweden"];
 
 function showQuestion() {
     //display question container
@@ -59,11 +59,11 @@ function showAnswer() {
     //add answer toggle box
     let answercell = document.getElementById("questionanswertext");
     //connect cell to answer location
-    if (questioncell.innerHTML == "What did the people of Prague do with Ferdinand's representives?" || questioncell.innerHTML == "b" || questioncell.innerHTML == "What year was the Peace of Westphalia created?") {
+    if (questioncell.innerHTML == "What did the people of Prague do with Ferdinand's representives?" || questioncell.innerHTML == "Which was the first phase in the Thirty Years' War and who was the winner?" || questioncell.innerHTML == "What year was the Peace of Westphalia created?") {
         answercell.innerHTML = answerkey200[questionkey200.indexOf(questioncell.innerHTML)];
-    } else if (questioncell.innerHTML == "What religion did Ferdinand want the people to become?" || questioncell.innerHTML == "e" || questioncell.innerHTML == "Who rose to power after the Thirty Years' War?") {
+    } else if (questioncell.innerHTML == "What religion did Ferdinand want the people to become?" || questioncell.innerHTML == "Which country was the weakest during the whole war?" || questioncell.innerHTML == "Who rose to power after the Thirty Years' War?") {
         answercell.innerHTML = answerkey400[questionkey400.indexOf(questioncell.innerHTML)];
-    } else if (questioncell.innerHTML == "What group initially declared war on Ferdinand?" || questioncell.innerHTML == "h" || questioncell.innerHTML == "How do we see a political shift in the War?") {
+    } else if (questioncell.innerHTML == "What group initially declared war on Ferdinand?" || questioncell.innerHTML == "Where did Frederick V go after his failure?" || questioncell.innerHTML == "How do we see a political shift in the War?") {
         answercell.innerHTML = answerkey600[questionkey600.indexOf(questioncell.innerHTML)];
     } else {
         return;
